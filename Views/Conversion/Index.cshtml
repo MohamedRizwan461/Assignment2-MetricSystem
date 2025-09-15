@@ -1,0 +1,26 @@
+﻿@model TemperatureModel
+@{
+    ViewData["Title"] = "Convert Fahrenheit To Celsius";
+}
+
+<h1 class="page-title">Convert Fahrenheit To Celsius</h1>
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+<form asp-action="Index" method="post">
+    <div>
+        <label asp-for="Fahrenheit"></label>
+        <input asp-for="Fahrenheit" />
+        <span asp-validation-for="Fahrenheit" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="Celsius"></label>
+        <input asp-for="Celsius" readonly />
+    </div>
+
+    <div>
+        <button type="submit">Convert</button>
+        <a asp-action="Index">Clear</a>
+    </div>
+</form>

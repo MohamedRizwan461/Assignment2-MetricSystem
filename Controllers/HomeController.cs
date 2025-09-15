@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using MetricSystem.Models;
-using System;
 
 namespace MetricSystem.Controllers
 {
@@ -9,24 +8,10 @@ namespace MetricSystem.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            return View(new TemperatureModel());
+            // Change 1: Simplified the return statement per feedback.
+            return View();
         }
 
-       [HttpPost]
-[ValidateAntiForgeryToken]
-public IActionResult Index(TemperatureModel model)
-{
-    if (!ModelState.IsValid)
-    {
-        ViewBag.CelsiusValue = null;
-        return View(model);
-    }
-
-    double celsius = model.ToCelsius();
-    ViewBag.CelsiusValue = celsius;
-
-    return View(model);
-}
 
     }
 }

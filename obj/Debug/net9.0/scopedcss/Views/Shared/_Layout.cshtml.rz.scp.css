@@ -12,13 +12,13 @@ a[b-b0msf2ypty] {
 }
 
 .btn-primary[b-b0msf2ypty] {
-  color: #fff;
+  color: #ffffff00;
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
 
 .nav-pills .nav-link.active[b-b0msf2ypty], .nav-pills .show > .nav-link[b-b0msf2ypty] {
-  color: #fff;
+  color: #ffffff;
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
@@ -31,7 +31,7 @@ a[b-b0msf2ypty] {
 }
 
 .box-shadow[b-b0msf2ypty] {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, 1);
 }
 
 button.accept-policy[b-b0msf2ypty] {

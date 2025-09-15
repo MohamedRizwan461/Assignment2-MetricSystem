@@ -1,0 +1,46 @@
+@model TemperatureModel
+@{
+    ViewData["Title"] = "Fahrenheit to Celsius";
+}
+
+<div class="container">
+    @* Use margin utilities for spacing the title *@
+    <h1 class="mt-3 mb-4">@ViewData["Title"]</h1>
+
+    <form asp-action="Fahrenheit" method="post">
+        
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        @* Each form group is a 'row' with a bottom margin 'mb-3' *@
+        <div class="row mb-3">
+            @* The label takes 3 of 12 columns on medium screens *@
+            <label asp-for="Fahrenheit" class="col-md-3 col-form-label">Fahrenheit Value</label>
+
+            @* The input is wrapped in a div that also takes 3 columns *@
+            <div class="col-md-3">
+                @* The 'form-control' class styles the input field *@
+                <input asp-for="Fahrenheit" class="form-control" />
+            </div>
+
+            @* The validation message appears in the remaining space, styled in red *@
+            <span asp-validation-for="Fahrenheit" class="col text-danger"></span>
+        </div>
+
+        <div class="row mb-3">
+    <label class="col-md-3 col-form-label">Celsius Value</label>
+    <div class="col-md-3">
+        <input value="@ViewBag.CelsiusValue" class="form-control" readonly />
+    </div>
+
+        </div>
+
+        <div class="row">
+            @* The offset class pushes the buttons to align under the inputs *@
+            <div class="col offset-md-3">
+                @* Use 'btn' and contextual classes for button styling *@
+                <button type="submit" class="btn btn-primary">Convert</button>
+                <a asp-action="Fahrenheit" asp-controller="Conversion" class="btn btn-outline-secondary">Clear</a>
+            </div>
+        </div>
+    </form>
+</div>

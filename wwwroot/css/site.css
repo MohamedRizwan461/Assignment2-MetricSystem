@@ -1,10 +1,14 @@
-body {
+.home-background {
     padding: 1em;
     font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 h1 {
-    color: navy;
+    color: grey;
 }
 
 label {
@@ -21,4 +25,12 @@ footer {
     text-align: center;
     padding-top: 1em;
     font-size: 80%;
+}
+
+.welcome-box {
+  background-color: rgba(255, 255, 255, 0.9); /* Opaque white */
+  color: black;
+  padding: 3rem; 
+  border-radius: 1rem;
+  text-align: center;
 }
